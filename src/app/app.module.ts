@@ -2,12 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TimeAgoPipe } from 'time-ago-pipe';
 
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { TabViewModule } from 'primeng/tabview';
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AppRoutingModule } from './routes/app-routing.module';
 import { AppComponent } from './components/app/app.component';
@@ -20,6 +20,7 @@ import { RepositoriesComponent } from './components/repositories/repositories.co
 import { StarredComponent } from './components/starred/starred.component';
 import { FollowersComponent } from './components/followers/followers.component';
 import { FollowingsComponent } from './components/followings/followings.component';
+import { SortGridPipe } from './pipes/sort-grid/sort-grid.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,9 @@ import { FollowingsComponent } from './components/followings/followings.componen
     RepositoriesComponent,
     StarredComponent,
     FollowersComponent,
-    FollowingsComponent
+    FollowingsComponent,
+    SortGridPipe,
+    TimeAgoPipe
   ],
   imports: [
     BrowserModule,
@@ -41,8 +44,7 @@ import { FollowingsComponent } from './components/followings/followings.componen
     InputTextModule,
     ButtonModule,
     CardModule,
-    TabViewModule,
-    AngularFontAwesomeModule
+    TabViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]

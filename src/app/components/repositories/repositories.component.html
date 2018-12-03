@@ -1,12 +1,12 @@
 <ul class="list-unstyled" *ngIf="isSuccess && repositories ;else other_content">
-  <li class="border-bottom repo-times" *ngFor="let repository of repositories">
+  <li class="border-bottom repo-items" *ngFor="let repository of repositories |  sortgrid: '-createdDate'">
     <h3><a href={{repository.html_url}} target="_blank">{{repository.name}}</a></h3>
-    <p class="text-gray .py-1">{{repository.description}}</p>
+    <p class="text-gray .py-1 repo-name">{{repository.description}}</p>
     <div class="pull-left f6 text-gray mt-2">
       <span>{{repository.language}}</span>
       <strong><i class="fa fa-star"></i>{{repository.stargazers_count}}</strong>
       <strong><i class="fa fa-code-fork"></i> {{repository.forks_count}}</strong>
-      <time class="time">Updated {{repository.pushed_at}}</time>
+      <time class="time">Updated {{repository.pushed_at | timeAgo}}</time>
     </div>
   </li>
 </ul>
