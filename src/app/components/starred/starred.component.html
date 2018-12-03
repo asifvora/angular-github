@@ -1,0 +1,19 @@
+<ul class="list-unstyled" *ngIf="isSuccess && starred ;else other_content">
+  <li class="border-bottom repo-items" *ngFor="let repo of starred">
+    <h3><a href={{repo.html_url}} target="_blank" title={{repo.name}}>{{repo.name}}</a></h3>
+    <p class="text-gray">{{repo.description}}</p>
+    <div class="pull-left">
+      <strong>{{repo.language}}</strong>
+      <strong><i class="fa fa-star"></i> {{repo.stargazers_count}}</strong>
+      <strong><i class="fa fa-code-fork"></i> {{repo.forks_count}}</strong>
+      <time class="time">Updated {{repo.pushed_at}}</time>
+    </div>
+  </li>
+</ul>
+
+<ng-template #other_content>
+  <div class="record-not-found">
+    <p *ngIf="isLoading">loading...</p>
+    <p *ngIf="!isLoading && !isSuccess">No record found.</p>
+  </div>
+</ng-template>

@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  // API_END_URL: 'https://github.com/'
   API_END_URL: 'https://api.github.com/'
 };
 

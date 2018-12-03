@@ -1,0 +1,30 @@
+<ul class="list-unstyled">
+  <div *ngIf="isSuccess && followers ;else other_content">
+    <div class="ui-g border-bottom item" *ngFor="let follower of followers">
+      <div class="follow-items">
+        <li>
+          <span>
+            <img src={{follower.avatar_url}} class="avatar img-rounded img-responsive user-image" alt="User Avatar" />
+          </span>
+        </li>
+      </div>
+      <div class="follow-items">
+        <span class="f4 link-gray-dark">{{follower.name}}</span>
+        <span>
+          <a href={{follower.html_url}} target="_blank" title={{follower.login}}>
+            {{follower.login}}
+          </a>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div>
+  </div>
+</ul>
+
+<ng-template #other_content>
+  <div class="record-not-found">
+    <p *ngIf="isLoading">loading...</p>
+    <p *ngIf="!isLoading && !isSuccess">No record found.</p>
+  </div>
+</ng-template>

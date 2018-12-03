@@ -1,0 +1,14 @@
+.user-image {
+    height: 50px !important;
+    width: 50px !important;
+}
+
+.follow-items {
+    display: inline-block !important;
+    margin: 10px !important;
+    align-self: center !important;
+}
+
+.item {
+    flex-wrap: unset;
+}

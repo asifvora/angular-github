@@ -1,0 +1,19 @@
+<ul class="list-unstyled" *ngIf="isSuccess && repositories ;else other_content">
+  <li class="border-bottom repo-times" *ngFor="let repository of repositories">
+    <h3><a href={{repository.html_url}} target="_blank">{{repository.name}}</a></h3>
+    <p class="text-gray .py-1">{{repository.description}}</p>
+    <div class="pull-left f6 text-gray mt-2">
+      <span>{{repository.language}}</span>
+      <strong><i class="fa fa-star"></i>{{repository.stargazers_count}}</strong>
+      <strong><i class="fa fa-code-fork"></i> {{repository.forks_count}}</strong>
+      <time class="time">Updated {{repository.pushed_at}}</time>
+    </div>
+  </li>
+</ul>
+
+<ng-template #other_content>
+  <div class="record-not-found">
+    <p *ngIf="isLoading">loading...</p>
+    <p *ngIf="!isLoading && !isSuccess">No record found.</p>
+  </div>
+</ng-template>

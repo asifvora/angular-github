@@ -12,7 +12,7 @@ export class ProfileComponent implements OnInit {
   user: any;
   isUserLoading: boolean = true;
   isUserSuccess: boolean = false;
-  Organizations: any;
+  organizations: any;
   isOrganizationsSuccess: boolean = false
 
   constructor(private github: GithubService) { }
@@ -26,6 +26,14 @@ export class ProfileComponent implements OnInit {
       }, error => {
         this.isUserSuccess = false;
         this.isUserLoading = false;
+      });
+
+    this.github.getOrganizations(this.username).subscribe(
+      response => {
+        this.isOrganizationsSuccess = true;
+        this.organizations = response;
+      }, error => {
+        this.isOrganizationsSuccess = false;
       });
   }
 

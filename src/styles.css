@@ -238,3 +238,17 @@ body {
     display: inline-block !important;
     margin: 10px !important;
 }
+
+.loading-profile {
+    padding-top: 50%;
+    text-align: center;
+}
+
+.profile-not-found {
+    padding-top: 50%;
+    text-align: center;
+}
+.record-not-found{
+    justify-content: center;
+    text-align: center;
+}

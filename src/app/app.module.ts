@@ -3,16 +3,23 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { InputTextModule } from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
+import { TabViewModule } from 'primeng/tabview';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
 import { AppRoutingModule } from './routes/app-routing.module';
 import { AppComponent } from './components/app/app.component';
 import { GithubComponent } from './components/github/github.component';
 import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
-import { InputTextModule } from 'primeng/inputtext';
-import { ButtonModule } from 'primeng/button';
-import { CardModule } from 'primeng/card';
 import { ProfileComponent } from './components/profile/profile.component';
+import { RepositoriesComponent } from './components/repositories/repositories.component';
+import { StarredComponent } from './components/starred/starred.component';
+import { FollowersComponent } from './components/followers/followers.component';
+import { FollowingsComponent } from './components/followings/followings.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +27,11 @@ import { ProfileComponent } from './components/profile/profile.component';
     GithubComponent,
     HomeComponent,
     NotFoundComponent,
-    ProfileComponent
+    ProfileComponent,
+    RepositoriesComponent,
+    StarredComponent,
+    FollowersComponent,
+    FollowingsComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +40,9 @@ import { ProfileComponent } from './components/profile/profile.component';
     HttpClientModule,
     InputTextModule,
     ButtonModule,
-    CardModule
+    CardModule,
+    TabViewModule,
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

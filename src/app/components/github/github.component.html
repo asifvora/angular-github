@@ -4,7 +4,21 @@
       <div class="ui-g-3 profile-side">
         <app-profile [username]="username"></app-profile>
       </div>
-      <div class="ui-g-9 details-side">
+      <div class="ui-g-12 details-side">
+        <p-tabView>
+          <p-tabPanel header="Repositories">
+            <app-repositories [username]="username"></app-repositories>
+          </p-tabPanel>
+          <p-tabPanel header="Stars">
+            <app-starred [username]="username"></app-starred>
+          </p-tabPanel>
+          <p-tabPanel header="Followers">
+            <app-followers [username]="username"></app-followers>
+          </p-tabPanel>
+          <p-tabPanel header="Followings">
+            <app-followings [username]="username"></app-followings>
+          </p-tabPanel>
+        </p-tabView>
       </div>
     </div>
   </div>

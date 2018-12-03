@@ -9,9 +9,9 @@
       <div>{{user.bio}}</div>
     </div>
   </div>
-  <div *ngIf="isOrganizationsSuccess && Organizations" class="border-top py-3 clearfix border-bottom">
+  <div *ngIf="isOrganizationsSuccess && organizations" class="border-top py-3 clearfix border-bottom">
     <h2 class="mb-1 h4">Organizations</h2>
-    <div *ngFor="let org of Organizations">
+    <div *ngFor="let org of organizations">
       <img src={{org.avatar_url}} alt="Organization Avatar" height={35} width={35} class="avatar" />
     </div>
   </div>
@@ -25,4 +25,8 @@
       <h2>{{user.following}}</h2>
     </span>
   </div>
+  <div *ngIf="!isUserSuccess" class="profile-not-found">
+    <p>User <b>{{username}}</b> not found.</p>
+  </div>
+  <div *ngIf="isUserLoading" class="loading-profile">Loading...</div>
 </div>
