@@ -1,0 +1,12 @@
+<form class="container home" [formGroup]="userForm">
+  <p-card header="Github account" class="ui-card-shadow">
+    <div class="ui-inputgroup">
+      <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
+      <input type="text" formControlName="username" />
+      <p-button type="submit" iconPos="left" icon="pi pi-check" label="Go" (click)="onSubmit()"></p-button>
+    </div>
+    <div *ngIf="submitted && f.username.errors">
+      <p *ngIf="f.username.errors.required" class="error">Please enter username.</p>
+    </div>
+  </p-card>
+</form>

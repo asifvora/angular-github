@@ -1,0 +1,28 @@
+<div>
+  <div class="user border-bottom" *ngIf="isUserSuccess && user">
+    <img src={{user.avatar_url}} width="230" height="230" class="img-rounded img-responsive" alt="User Avatar" />
+    <h1 class="vcard-names">
+      <span class="p-name vcard-fullname d-block overflow-hidden">{{user.name}}</span>
+      <span class="p-nickname vcard-username d-block">{{user.login}}</span>
+    </h1>
+    <div class="p-note user-profile-bio">
+      <div>{{user.bio}}</div>
+    </div>
+  </div>
+  <div *ngIf="isOrganizationsSuccess && Organizations" class="border-top py-3 clearfix border-bottom">
+    <h2 class="mb-1 h4">Organizations</h2>
+    <div *ngFor="let org of Organizations">
+      <img src={{org.avatar_url}} alt="Organization Avatar" height={35} width={35} class="avatar" />
+    </div>
+  </div>
+  <div class="border-bottom" *ngIf="isUserSuccess && user">
+    <span>
+      <small>Repositories</small>
+      <h2>{{user.public_repos}}</h2>
+      <small>Followers</small>
+      <h2>{{user.followers}}</h2>
+      <small>Following</small>
+      <h2>{{user.following}}</h2>
+    </span>
+  </div>
+</div>

@@ -1,1 +1,240 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+form.home {
+    width: 20%;
+    color: white;
+    border-radius: 1em;
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.error {
+    padding-top: 3px;
+    color: red;
+}
+
+.profile-side {
+    width: 280px !important;
+    position: absolute;
+    z-index: -1;
+}
+
+.details-side {
+    padding-left: 285px !important;
+}
+
+.user-profile-bio {
+    margin-bottom: 12px;
+    overflow: hidden;
+    font-size: 14px;
+    color: #6a737d;
+}
+
+body {
+    color: #666;
+}
+
+time,
+strong,
+small {
+    color: #888;
+}
+
+strong {
+    margin-left: 10px;
+}
+
+h2,
+h4 {
+    color: #333;
+}
+
+h5 {
+    font-weight: 300;
+    font-size: 20px;
+}
+
+li {
+    padding: 25px 0;
+}
+
+section {
+    padding: 20px 0;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #eee;
+}
+
+section.home {
+    padding-top: 200px;
+    text-align: center;
+}
+
+section.home button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+section.stats {
+    text-align: center;
+}
+
+section.stats span {
+    display: inline-block;
+    width: 80px;
+}
+
+section.stats h2 {
+    margin: 0;
+}
+
+section.orgs img {
+    border-radius: 3px;
+    margin: 5px;
+    width: 42px;
+    height: 42px;
+}
+
+a {
+    color: #0366d6;
+    text-decoration: none;
+}
+
+.content-wrapper {
+    padding: 3em 7em 1em 7em;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.vcard-names {
+    line-height: 1;
+}
+
+.vcard-fullname {
+    font-size: 26px;
+    line-height: 30px;
+}
+
+.vcard-username {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    color: #666;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.overflow-hidden {
+    overflow: hidden !important;
+}
+
+.py-3 {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+}
+
+.border-top {
+    border-top: 1px #e1e4e8 solid !important;
+}
+
+.avatar {
+    display: inline-block;
+    overflow: hidden;
+    line-height: 1;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+
+.h4 {
+    font-size: 16px !important;
+}
+
+.mb-1 {
+    margin-bottom: 4px !important;
+}
+
+.user-profile-bio {
+    margin-bottom: 12px;
+    overflow: hidden;
+    font-size: 14px;
+    color: #6a737d;
+}
+
+body {
+    min-width: 1020px;
+    word-wrap: break-word;
+}
+
+.width-full {
+    width: 100% !important;
+}
+
+.form-control,
+.form-select {
+    min-height: 34px;
+    padding: 6px 8px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #24292e;
+    vertical-align: middle;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+    outline: none;
+    box-shadow: inset 0 1px 2px rgba(27, 31, 35, 0.075);
+    width: 400px;
+}
+
+/* @media (min-width: 768px) .form-control,.form-select {
+    font-size: 14px;
+} */
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+.link-gray-dark {
+    color: #24292e !important;
+}
+
+.f4 {
+    font-size: 16px !important;
+}
+
+.text-gray {
+    color: #586069 !important;
+}
+
+.f6 {
+    font-size: 12px !important;
+}
+
+.py-1 {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+}
+
+.follow-items {
+    display: inline-block !important;
+    margin: 10px !important;
+}
