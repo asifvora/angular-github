@@ -7,10 +7,18 @@
       <div class="ui-g-12 details-side">
         <p-tabView>
           <p-tabPanel header="Repositories">
-            <app-repositories [username]="username"></app-repositories>
+            <div class="border-bottom">
+              <input type="text" (input)="handleRepoName($event.target.value)" class="form-control width-full js-autosearch-field"
+                placeholder="Search repositories…">
+            </div>
+            <app-repositories [username]="username" [repoName]="repoName"></app-repositories>
           </p-tabPanel>
           <p-tabPanel header="Stars">
-            <app-starred [username]="username"></app-starred>
+            <div class="border-bottom">
+              <input type="text" (input)="handleStarredRepoName($event.target.value)" class="form-control width-full js-autosearch-field"
+                placeholder="Search starred repositories…">
+            </div>
+            <app-starred [username]="username" [starredRepoName]="starredRepoName"></app-starred>
           </p-tabPanel>
           <p-tabPanel header="Followers">
             <app-followers [username]="username"></app-followers>

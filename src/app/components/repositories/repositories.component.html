@@ -1,5 +1,5 @@
 <ul class="list-unstyled" *ngIf="isSuccess && repositories ;else other_content">
-  <li class="border-bottom repo-items" *ngFor="let repository of repositories |  sortgrid: '-createdDate'">
+  <li class="border-bottom repo-items" *ngFor="let repository of repositories |  sortgrid: '-createdDate' | filter: repoName">
     <h3><a href={{repository.html_url}} target="_blank">{{repository.name}}</a></h3>
     <p class="text-gray .py-1 repo-name">{{repository.description}}</p>
     <div class="pull-left f6 text-gray mt-2">
@@ -10,7 +10,6 @@
     </div>
   </li>
 </ul>
-
 <ng-template #other_content>
   <div class="record-not-found">
     <p *ngIf="isLoading">loading...</p>

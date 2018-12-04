@@ -1,5 +1,5 @@
 <ul class="list-unstyled" *ngIf="isSuccess && starred ;else other_content">
-  <li class="border-bottom repo-items" *ngFor="let repo of starred |  sortgrid: '-createdDate'  ">
+  <li class="border-bottom repo-items" *ngFor="let repo of starred |  sortgrid: '-createdDate'  | filter: starredRepoName ">
     <h3><a href={{repo.html_url}} target="_blank" title={{repo.name}}>{{repo.name}}</a></h3>
     <p class="text-gray .py-1 repo-name">{{repo.description}}</p>
     <div class="pull-left">

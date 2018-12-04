@@ -7,8 +7,9 @@ import { GithubService } from './../../services/github/github.service';
   styleUrls: ['./repositories.component.css']
 })
 export class RepositoriesComponent implements OnInit {
-  
+
   @Input() username: string;
+  @Input() repoName: string;
   repositories: any;
   isLoading: boolean = true;
   isSuccess: boolean = false;
@@ -19,7 +20,7 @@ export class RepositoriesComponent implements OnInit {
     this.github.getRepositories(this.username).subscribe(
       response => {
         this.isLoading = false;
-        this.isSuccess = true;        
+        this.isSuccess = true;
         this.repositories = response;
       }, error => {
         this.isLoading = false;

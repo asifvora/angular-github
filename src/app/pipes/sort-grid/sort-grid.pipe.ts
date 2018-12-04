@@ -6,6 +6,7 @@ import { Injectable, Pipe, PipeTransform } from '@angular/core';
 
 @Injectable()
 export class SortGridPipe implements PipeTransform {
+
   transform(array: Array<any>, args: string): Array<any> {
     if (typeof args[0] === "undefined") {
       return array;
@@ -14,5 +15,6 @@ export class SortGridPipe implements PipeTransform {
 
     return array;
   }
+
 }
 

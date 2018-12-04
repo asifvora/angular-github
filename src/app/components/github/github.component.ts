@@ -9,6 +9,8 @@ import { ActivatedRoute } from '@angular/router';
 export class GithubComponent implements OnInit {
 
   private username;
+  private repoName;
+  private starredRepoName;
 
   constructor(private route: ActivatedRoute) { }
 
@@ -18,5 +20,14 @@ export class GithubComponent implements OnInit {
     // });
     this.username = this.route.snapshot.paramMap.get('username');
   }
+
+  handleRepoName(value) {
+    this.repoName = value;
+  }
+
+  handleStarredRepoName(value) {
+    this.starredRepoName = value;
+  }
+
 
 }

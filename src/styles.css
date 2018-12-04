@@ -251,4 +251,7 @@ body {
 .record-not-found{
     justify-content: center;
     text-align: center;
+    margin: 10px;
+    font-size: 25px;
+    font-weight: bold;
 }

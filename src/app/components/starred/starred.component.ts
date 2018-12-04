@@ -9,6 +9,7 @@ import { GithubService } from './../../services/github/github.service';
 export class StarredComponent implements OnInit {
 
   @Input() username: string;
+  @Input() starredRepoName: string;
   starred: any;
   isLoading: boolean = true;
   isSuccess: boolean = false;

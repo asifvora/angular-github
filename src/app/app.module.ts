@@ -21,6 +21,7 @@ import { StarredComponent } from './components/starred/starred.component';
 import { FollowersComponent } from './components/followers/followers.component';
 import { FollowingsComponent } from './components/followings/followings.component';
 import { SortGridPipe } from './pipes/sort-grid/sort-grid.pipe';
+import { FilterPipe } from './pipes/filter/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { SortGridPipe } from './pipes/sort-grid/sort-grid.pipe';
     FollowersComponent,
     FollowingsComponent,
     SortGridPipe,
-    TimeAgoPipe
+    TimeAgoPipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
