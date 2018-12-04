@@ -8,9 +8,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class GithubComponent implements OnInit {
 
-  private username;
-  private repoName;
-  private starredRepoName;
+  public username;
+  public repoName;
+  public starredRepoName;
 
   constructor(private route: ActivatedRoute) { }
 
